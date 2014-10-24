@@ -7,7 +7,7 @@ import re
 
 
     
-#initialized the file path
+#function for Query the csv data
 def get_fid(filepath):
         if os.path.exists(filepath):
                 xa = str(input('Please input FID feature : '))
@@ -97,7 +97,8 @@ def get_fid(filepath):
                 print "!!file not exist!!" 
                 print "!!!!!warning!!!!!!" 
                 print "------------------"
-        
+
+#initialized the file path        
 def get_file_path(filename):
 	cur_dir = os.getcwd()
 	file_path = os.path.join(os.getcwd(), filename)
@@ -105,7 +106,8 @@ def get_file_path(filename):
 
 
 
-def test_file(filepath):#this function also provide a header checker#
+#this function for header checker#
+def test_file(filepath):
         if os.path.exists(filepath):
                 with open(filepath, 'rU') as csvfile:
                         reader = [line.split(',') for line in csvfile.readlines()]
@@ -126,6 +128,7 @@ def test_file(filepath):#this function also provide a header checker#
                 print "!!!!!warning!!!!!!" 
                 print "------------------"
                 
+#function for display the csv data
 def read_csv_file(filepath):
         if os.path.exists(filepath): 
                 with open(filepath, 'rU') as csvfile:                
@@ -153,10 +156,10 @@ while True:
         print " "
         print "[1] checking header correction"
         print "[2] display data structure"
-        print "[3] belum ada"
-        print "[4] belum ada"
+        print "[3] belum jadi"
+        print "[4] belum jadi"
         print "[5] search features by FID"
-        print "[6] belum ada"
+        print "[6] belum jadi"
         print "[7] quit"
         print ""
         x = input('please choose : ')
